@@ -1,0 +1,26 @@
+package com.iykim.todoapp.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.iykim.todoapp.domain.TodoItem;
+import com.iykim.todoapp.repository.TodoRepository;
+
+
+// Service is the place where the business logic happens, unique
+// All Controllers and Repository have pretty similar across all apps
+// Service is the part where it makes the app unique
+
+@Service
+public class TodoService {
+	
+	@Autowired
+	private TodoRepository todoRepo;
+	
+	public List<TodoItem> fetchAllTodoItems() {
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.iykim.todoapp;
+
+import org.springframework.stereotype.Service;
+
+
+// Serivce is the place where the business logic happens, unique
+
+@Service
+public class TodoService {
+
+}

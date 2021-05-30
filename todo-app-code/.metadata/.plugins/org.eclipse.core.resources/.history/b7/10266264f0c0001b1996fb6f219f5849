@@ -1,0 +1,7 @@
+package com.iykim.todoapp.domain;
+
+public class TodoItem {
+	
+	private Long id;
+	
+}

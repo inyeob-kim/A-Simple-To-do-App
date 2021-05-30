@@ -1,0 +1,8 @@
+package com.iykim.todoapp.domain;
+
+public class TodoItem {
+	
+	// in general, developers use long instead of Integer in real world
+	private Long id;
+	
+}

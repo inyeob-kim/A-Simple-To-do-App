@@ -1,0 +1,13 @@
+package com.iykim.todoapp;
+
+import org.springframework.stereotype.Service;
+
+
+// Service is the place where the business logic happens, unique
+// All Controllers and Repository have pretty similar across all apps
+// Service is the part where it makes the app unique
+
+@Service
+public class TodoService {
+
+}

@@ -1,0 +1,16 @@
+package com.iykim.todoapp.repository;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.iykim.todoapp.domain.TodoItem;
+
+@Repository
+public class TodoRepository {
+	
+	
+	public List<TodoItem> fetchAllTodoItems() {
+		
+	}
+}

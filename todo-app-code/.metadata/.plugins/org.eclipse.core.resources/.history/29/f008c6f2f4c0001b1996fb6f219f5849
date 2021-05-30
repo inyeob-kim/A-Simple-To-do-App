@@ -1,0 +1,43 @@
+package com.iykim.todoapp.web;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.iykim.todoapp.domain.TodoItem;
+import com.iykim.todoapp.service.TodoService;
+
+
+
+// RestController listens incoming requests --> sends response(objects) ex.json, xml
+// @Controller --> returns a view --> but RestController is more universal and generic way to build app
+@RestController
+public class TodoController {
+	
+	//   frontend        java server
+	// HttpRequest  -->   Controller  -->  Service  -->  Repository  
+    //	 frontend	<--	  Controller  <--  Service	<--
+	
+	// Controller Responsibility
+	// Controller invokes the service
+	// if the service gives us data back
+	// send the data back to the frontend
+	
+	@Autowired
+	private TodoService todoService;
+	
+	// When the react app sends the 'get' request
+	// == fetch all todo items (from database)
+	@GetMapping("/api/todoItems")
+	public ResponseEntity<?> fetchAllTodoItems() {
+		List<TodoItem> todoItems = todoService.fetchAllTodoItems();
+		
+		// return ResponseEntity.status(HttpStatus.OK).body(todoItems)
+		return ResponseEntity.ok(todoItems);
+	}
+	
+}

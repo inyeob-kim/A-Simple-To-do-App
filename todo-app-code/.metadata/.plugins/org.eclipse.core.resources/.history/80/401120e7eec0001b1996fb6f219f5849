@@ -1,0 +1,13 @@
+package com.iykim.todoapp.web;
+
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+// RestController listens incoming requests --> sends response
+// 
+@RestController
+public class TodoController {
+	
+	
+}
